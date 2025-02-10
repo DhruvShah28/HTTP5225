@@ -19,9 +19,9 @@
         //echo '<pre> '.print_r($colors).'  </pre>'
 
         while($record = mysqli_fetch_assoc($colors)){
-            echo '<span>';
-            print_r($record);
-            echo '</span>';
+            // echo '<span>';
+            // print_r($record);
+            // echo '</span>';
             echo '<div style="
                     width:100%;
                     height:100px;
