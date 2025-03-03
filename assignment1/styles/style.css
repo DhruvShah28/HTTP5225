@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+
+.card{
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 5px #d1d1d1;
+    transition: box-shadow 200ms linear, transform 200ms linear;
+}
+
+.card:hover{
+    transform: translateY(0);
+    box-shadow: none;
+    transition: box-shadow 200ms linear, transform 200ms linear;
+}
+
+.card-image{
+    height: 400px;
+}
+
+.mylist{
+    margin: 15px 0;
+}
+
+.list-group{
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 5px #d1d1d1;
+    transition: box-shadow 200ms linear, transform 200ms linear;
+}
+
+.list-group:hover{
+    transform: translateY(0);
+    box-shadow: none;
+    transition: box-shadow 200ms linear, transform 200ms linear;
+
+}
