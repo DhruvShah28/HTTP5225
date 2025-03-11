@@ -1,5 +1,5 @@
 <?php
-  include('reusables/con.php');
+  include('reusables/conn.php');
   include('functions.php');
 ?>
 
