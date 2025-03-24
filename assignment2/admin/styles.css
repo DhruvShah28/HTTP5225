@@ -1,0 +1,7 @@
+input, select {
+  max-width: 500px;
+}
+
+.dashboard-item{
+  max-width: 600px;
+}
