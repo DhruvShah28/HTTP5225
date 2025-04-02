@@ -16,7 +16,7 @@ include( 'includes/header.php' );
                     $details = $result->fetch_assoc();
                 }
                 if ($details) {
-                    echo '<div class="card shadow-lg border-0">';
+                    echo '<div class="card ">';
                     if ($details['category'] === "Attraction"){
                         echo '  <div class="card-header bg-primary text-white text-center">';
                         echo '      <h2 class="fw-bold mb-0">' . ($details['name']) . '</h2>';
@@ -50,7 +50,7 @@ include( 'includes/header.php' );
                     echo '     <a href="https://www.google.com/maps/dir/?api=1&destination=' . $details['Latitude'] . ',' . $details['Longitude'] . '" target="_blank" class="mt-3">Get Directions</a></p>';
                     echo '  </div>';
                     echo '  <div class="card-footer text-center">';
-                    echo '      <a href="index.php" class="btn btn-secondary">Back to Home</a>';
+                    echo '      <a href="index.php" class="btn">Back to Home</a>';
                     echo '  </div>';
                     echo '</div>';
                 } else {

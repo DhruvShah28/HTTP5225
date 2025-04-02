@@ -11,6 +11,7 @@ include( 'admin/includes/functions.php' );
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toronto Attractions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -20,21 +21,21 @@ include( 'admin/includes/functions.php' );
 
     <nav class="navbar navbar-expand-sm bg-warning-subtle mb-4 p-4">
         <div class="container-fluid">
-            <a class="navbar-brand fs-2 text-success" href="#">Toronto Attractions</a>
+            <a class="navbar-brand text-success" href="#">Toronto Attractions</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active fs-3 text-primary mx-3" aria-current="page" href="#">Home</a>
-                    <a class="nav-link fs-3 text-primary mx-3" href="./admin/index.php">Admin</a>
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="./admin/index.php">Admin</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <main class="container-fluid d-flex justify-content-center">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php
         $query = "SELECT * FROM `attractions_description`";
         $attractions = mysqli_query($connect, $query);
@@ -55,11 +56,11 @@ include( 'admin/includes/functions.php' );
                         echo '<div class="card-header text-bg-danger">'.$attraction['category'].'</div>';
                     } 
                     echo '<div class="card-body">
-                        <h5 class="card-title">'.$attraction['name'].'</h5>
+                        <h2 class="card-title">'.$attraction['name'].'</h2>
                         <p class="card-text">'.$attraction['description'].'</p>
                         <form action="details.php" method="GET">
                             <input type="hidden" name="id" value="' . $attraction['id'] . '">
-                            <button type="submit" class="btn btn-sm btn-primary">More Details</button>
+                            <button type="submit" class="btn">More Details</button>
                         </form>
                     </div>
                 </div>

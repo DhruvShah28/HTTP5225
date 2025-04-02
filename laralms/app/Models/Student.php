@@ -13,5 +13,5 @@ class Student extends Model
         'fname',
         'lname',
         'email'];
-        protected $dates = ['deleted_at', 'created_at'];
+       
 }

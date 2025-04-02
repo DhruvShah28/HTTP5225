@@ -11,6 +11,7 @@ include( 'admin/includes/functions.php' );
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toronto Attractions | Details</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -20,14 +21,14 @@ include( 'admin/includes/functions.php' );
 
     <nav class="navbar navbar-expand-sm bg-warning-subtle mb-4 p-4">
         <div class="container-fluid">
-            <a class="navbar-brand fs-2 text-success" href="#">Toronto Attractions</a>
+            <a class="navbar-brand " href="#">Toronto Attractions</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active fs-3 text-primary mx-3" aria-current="page" href="#">Home</a>
-                    <a class="nav-link fs-3 text-primary mx-3" href="./admin/index.php">Admin</a>
+                    <a class="nav-link active  mx-3" href="index.php">Home</a>
+                    <a class="nav-link  mx-3" href="./admin/index.php">Admin</a>
                 </div>
             </div>
         </div>
@@ -75,10 +76,10 @@ include( 'admin/includes/functions.php' );
                     echo '      <div class="row">';
                     include( 'admin/includes/map.php' );
                     echo '      </div>';
-                    echo '     <a href="https://www.google.com/maps/dir/?api=1&destination=' . $details['Latitude'] . ',' . $details['Longitude'] . '" target="_blank" class="mt-3">Get Directions</a></p>';
+                    echo '     <a href="https://www.google.com/maps/dir/?api=1&destination=' . $details['Latitude'] . ',' . $details['Longitude'] . '" target="_blank" class="mt-3" style="color: blue;">Get Directions</a></p>';
                     echo '  </div>';
                     echo '  <div class="card-footer text-center">';
-                    echo '      <a href="index.php" class="btn btn-secondary">Back to Home</a>';
+                    echo '      <a href="index.php" class="btn">Back to Home</a>';
                     echo '  </div>';
                     echo '</div>';
                 } else {

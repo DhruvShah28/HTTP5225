@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let deleteButtons = document.querySelectorAll(".delete-btn");
+    let deleteButtons = document.querySelectorAll(".open-delete-modal"); 
 
     deleteButtons.forEach(button => {
         button.addEventListener("click", function() {

@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+  height: 100%; /* Make sure the body takes the full height of the viewport */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav.navbar {
+  margin-bottom: 20px; 
+}
+
+.navbar {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px 20px;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: #fff !important;
+  font-size: 1.4rem;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-nav .nav-link {
+  color: #f9f9f9 !important;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 8px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Area */
+main.container {
+  flex: 1; 
+  margin-top: 30px;
+}
+
+main.container-fluid {
+  margin-top: 20px; 
+}
+
+/* Card Grid Layout */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background: #ffffff;
+  margin-bottom: 25px;
+}
+
+/* Dynamic Category Colors for Card Header */
+.card-header.text-bg-primary { background-color: #e17a30 !important; color: white; } 
+.card-header.text-bg-info { background-color: #37b1b5 !important; color: white; } 
+.card-header.text-bg-warning { background-color: #e8c868 !important; color: white; } 
+.card-header.text-bg-success { background-color: #7756cb !important; color: white; } 
+.card-header.text-bg-danger { background-color: #973f5c !important; color: white; }
+
+/* General Card Hover Styling */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 10px rgba(188, 106, 25, 0.5);
+
+}
+
+/* Card Header Styling */
+.card-header {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+}
+
+/* Card Body Styling */
+.card-body {
+  padding: 22px;
+  font-size: 1.05rem;
+  color: #444;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Title Styling */
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Card Text Styling */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Get Directions Link */
+.card-body a {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #e74c3c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.card-body a:hover {
+  color: #c0392b;
+}
+
+/* Card Footer Styling */
+.card-footer {
+  background-color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.editform, .addform{
+  min-width: 100%;
+  padding: 50px;
+}
+
+
+/* Form Labels */
+.form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Input Fields */
+input.form-control, textarea.form-control, select.form-control {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+
+input.form-control:focus, textarea.form-control:focus, select.form-control:focus {
+  border-color: #ff7e5f; 
+  box-shadow: 0 0 8px rgba(255, 126, 95, 0.5);
+  outline: none;
+}
+
+/* Submit Button */
+input[type="submit"].btn {
+  background-color: #ff7e5f;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"].btn:hover {
+  background-color: #feb47b; 
+  transform: scale(1.05);
+}
+
+/* Fieldset Styling */
+fieldset {
+  border: 2px solid #ff7e5f; 
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Legend Styling */
+legend {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ff7e5f; 
+  width: auto;
+  background-color: #f9f9f9;
+  border: none;
+  text-align: center;
+  margin: 30px 0px;
+}
+
+
+/* Message Alerts */
+.alert {
+  font-size: 1rem;
+  color: #d9534f;
+  margin-top: 20px;
+}
+
+
+/* Footer Styles */
+footer.container-fluid {
+  background-color: #ffc89e; 
+  color: #d9534f; 
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 1rem;
+  border-top: 2px solid #e74c3c; 
+  margin-top: 30px;
+}
+
+footer.container-fluid div {
+  margin: 0;
+  font-weight: 400;
+}
+
+footer.container-fluid a {
+  color: #f39c12; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer.container-fluid a:hover {
+  color: #ff7e5f; 
+}
+
+/* Modal Styling */
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.modal-header {
+  background-color: #ff7e5f;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 1rem;
+  color: #333;
+  padding: 20px;
+}
+
+.modal-footer {
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Table Styling */
+.table {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #fff;
+}
+
+/* Responsive Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+
+/* Button Styling */
+.btn {
+  color: #ff7e5f;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #ff7e5f;
+  color: white;
+}
+
+.edit-btn, .add-btn{
+  color: rgb(2, 74, 182);
+}
+
+.edit-btn:hover, .add-btn:hover{
+  background-color: rgb(2, 74, 182);
+  color: white;
+}
+
+.delete-btn{
+  color: rgb(181, 1, 1);
+}
+
+.delete-btn:hover{
+  background-color: rgb(181, 1, 1);
+  color: white;
+}
+
+.cancel-btn{
+  color: rgb(189, 162, 54);
+}
+
+.cancel-btn:hover{
+  background-color: rgb(189, 162, 54);
+  color: white;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 0.85rem;
+    margin: 0 5px;
+  }
+
+  .card-header {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-body {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .btn-secondary {
+    font-size: 0.9rem;
+  }
+  main.container {
+    padding: 30px;
+    max-width: 350px;
+  }
+
+  input[type="submit"].btn {
+    font-size: 1rem;
+  }
+  footer.container-fluid {
+    font-size: 0.85rem;
+    padding: 15px;
+  }
+}
+

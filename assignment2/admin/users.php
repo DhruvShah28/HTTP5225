@@ -23,7 +23,7 @@ $result = mysqli_query( $connect, $query );
 <main class="container p-4">
   <h1 class="mb-4">Manage Users</h1>
 
-  <div><a href="users_add.php" class="btn btn-primary fs-5 mb-4">Add User</a></div>
+  <div><a href="users_add.php" class="btn add-btn">Add User</a></div>
 
   <div class="table-responsive mx-4">
   <table class="table table-striped">
@@ -43,11 +43,11 @@ $result = mysqli_query( $connect, $query );
         <td><a href="mailto:<?php echo htmlentities( $record['email'] ); ?>"><?php echo htmlentities( $record['email'] ); ?></a></td>
         <td><?php echo $record['active']; ?></td>
 
-        <td><a class="btn btn-warning" href="users_edit.php?id=<?php echo $record['id']; ?>">Edit</a></td>
+        <td><a class="btn edit-btn" href="users_edit.php?id=<?php echo $record['id']; ?>">Edit</a></td>
 
         <td>
           <?php if( $_SESSION['id'] != $record['id'] ): ?>
-            <a class="btn btn-danger" href="users.php?delete=<?php echo $record['id']; ?>" onclick="javascript:confirm('Are you sure you want to delete this user?');">Delete</a>
+            <a class="btn delete-btn" href="users.php?delete=<?php echo $record['id']; ?>" onclick="javascript:confirm('Are you sure you want to delete this user?');">Delete</a>
           <?php endif; ?>
         </td>
       </tr>

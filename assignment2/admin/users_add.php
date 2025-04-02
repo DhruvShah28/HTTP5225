@@ -30,43 +30,43 @@ if( isset( $_POST['first'] ) )
 include( 'includes/header.php' );
 ?>
 
-<main class="container-fluid p-3">
+<main class="container p-4">
   <h1 class="mb-4">Add User</h1>
 
-  <form method="post">
+  <form method="post" class="form-container">
     <div class="mb-3">
-      <label for="first" class="form-label">First Name:</label>
-      <input type="text" class="form-control" name="first" id="first">
+      <label for="first" class="form-label">First Name</label>
+      <input type="text" class="form-control" name="first" id="first" required>
     </div>
     <div class="mb-3">
-      <label for="last" class="form-label">Last Name:</label>
-      <input type="text" class="form-control" name="last" id="last">
+      <label for="last" class="form-label">Last Name</label>
+      <input type="text" class="form-control" name="last" id="last" required>
     </div>
     <div class="mb-3">
-      <label for="email" class="form-label">Email:</label>
-      <input type="email" class="form-control" name="email" id="email">
+      <label for="email" class="form-label">Email Address</label>
+      <input type="email" class="form-control" name="email" id="email" required>
     </div>
     <div class="mb-3">
-      <label for="password" class="form-label">Password:</label>
-      <input type="password" class="form-control" name="password" id="password">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" id="password" required>
     </div>
     <div class="mb-3">
-      <label for="active" class="form-label">Active:</label>
-      <select class="form-select" name="active" id="active">
-      <?php
-      $values = array( 'Yes', 'No' );
-      foreach( $values as $key => $value )
-      {
-        echo '<option value="'.$value.'"';
-        echo '>'.$value.'</option>';
-      }
-      ?>
+      <label for="active" class="form-label">Active</label>
+      <select class="form-control" name="active" id="active">
+        <?php
+        $values = array( 'Yes', 'No' );
+        foreach( $values as $value )
+        {
+          echo '<option value="'.$value.'">'.$value.'</option>';
+        }
+        ?>
       </select>
     </div>
-    <input type="submit" class="btn btn-success mb-4" value="Add User">
+    <div class="d-flexd-flex btns gap-2">
+      <button type="submit" class="btn add-btn" value="Add User">Add</button>
+      <a href="users.php" class="btn cancel-btn">Cancel</a>
+    </div>
   </form>
-
-  <div><a href="users.php" class="btn btn-danger">Return to User List</a></div>
 </main>
 
 <?php

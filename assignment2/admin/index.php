@@ -13,21 +13,21 @@ secure();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attractions Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-info-subtle bg-body-tertiary mb-4 p-4">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand fs-1 text-dark" href="dashboard.php">Website Admin</a>
+        <a class="navbar-brand" href="dashboard.php">Dashboard</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link fs-3 text-dark mx-3" href="addattraction.php">Add Attraction</a>
-            <a class="nav-link fs-3 text-dark mx-3" href="logout.php">Logout</a>
+            <a class="nav-link" href="addattraction.php">Add Attraction</a>
+            <a class="nav-link" href="logout.php">Logout</a>
           </div>
         </div>
     </div>
@@ -35,7 +35,7 @@ secure();
  
     <main class="container-fluid d-flex justify-content-center">
 
-        <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
         
         <?php
         $query = "SELECT * FROM `attractions_description`";
@@ -59,16 +59,16 @@ secure();
                     echo '<div class="card-body">
                         <h5 class="card-title">'.$attraction['name'].'</h5>
                         <p class="card-text">'.$attraction['description'].'</p>
-                        <div class="d-flex btns gap-3">
+                        <div class="d-flex btns gap-2">
                             <form action="details.php" method="GET">
                                 <input type="hidden" name="id" value="' . $attraction['id'] . '">
-                                <button type="submit" class="btn btn-sm btn-primary mt-3">More Details</button>
+                                <button type="submit" class="btn">More Details</button>
                             </form>
                             <form action="editattraction.php" method="GET">
                                 <input type="hidden" name="id" value="' . $attraction['id'] . '">
-                                <button type="submit" class="btn btn-sm btn-primary mt-3">Edit</button>
+                                <button type="submit" class="btn edit-btn">Edit</button>
                             </form>
-                            <button type="button" class="btn btn-danger delete-btn" 
+                            <button type="button" class="btn open-delete-modal delete-btn" 
                                         data-id=" '. htmlspecialchars($attraction['id']) .'" 
                                         data-name=" '. htmlspecialchars($attraction['name']) .'" 
                                         data-bs-toggle="modal" 
@@ -96,9 +96,9 @@ secure();
                     <div class="modal-footer">
                     <form id="deleteForm" method="POST" action="deleteattraction.php">
                         <input type="hidden" name="id" id="attraction_id">
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn delete-btn">Delete</button>
                     </form>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>

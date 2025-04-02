@@ -12,11 +12,11 @@ if( isset( $_POST['email'] ) )
     AND password = "'.md5( $_POST['password'] ).'"
     AND active = "Yes"
     LIMIT 1';
-  $result = mysqli_query( $connect, $query ); // a result set (like a table of data)
+  $result = mysqli_query( $connect, $query ); 
   
-  if( mysqli_num_rows( $result ) ) // counts the number of row
+  if( mysqli_num_rows( $result ) ) 
   {   
-    $record = mysqli_fetch_assoc( $result ); // change to array
+    $record = mysqli_fetch_assoc( $result );
     
     // security
     $_SESSION['id'] = $record['id'];

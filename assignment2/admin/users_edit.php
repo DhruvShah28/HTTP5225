@@ -56,29 +56,29 @@ if( isset( $_GET['id'] ) )
 }
 ?>
 
-<main class="container-fluid p-3">
+<main class="container p-3">
   <h1 class="mb-4">Edit User</h1>
 
   <form method="post">
     <div class="mb-3">
-      <label for="first" class="form-label">First Name:</label>
+      <label for="first" class="form-label">First Name</label>
       <input type="text" class="form-control" name="first" id="first" value="<?php echo htmlentities( $record['first'] ); ?>">
     </div>
     <div class="mb-3">
-      <label for="last" class="form-label">Last Name:</label>
+      <label for="last" class="form-label">Last Name</label>
       <input type="text" class="form-control" name="last" id="last" value="<?php echo htmlentities( $record['last'] ); ?>">
     </div>
     <div class="mb-3">
-      <label for="email" class="form-label">Email:</label>
+      <label for="email" class="form-label">Email Address</label>
       <input type="email" class="form-control" name="email" id="email" value="<?php echo htmlentities( $record['email'] ); ?>">
     </div>
     <div class="mb-3">
-      <label for="password" class="form-label">Password:</label>
+      <label for="password" class="form-label">Password</label>
       <input type="password" class="form-control" name="password" id="password">
     </div>
     <div class="mb-3">
-      <label for="active" class="form-label">Active:</label>
-      <select class="form-select" name="active" id="active">
+      <label for="active" class="form-label">Active</label>
+      <select  class="form-control" name="active" id="active">
       <?php
       $values = array( 'Yes', 'No' );
       foreach( $values as $key => $value )
@@ -89,11 +89,11 @@ if( isset( $_GET['id'] ) )
       }
       ?>
       </select>
-    </div>  
-    <input type="submit" class="btn btn-success mb-4" value="Edit User">
+      <div class="d-flexd-flex btns gap-2">
+      <button type="submit" class="btn edit-btn" value="Edit User">Edit</button>
+      <a href="users.php" class="btn cancel-btn">Cancel</a>
+    </div>
   </form>
-
-  <div><a href="users.php" class="btn btn-danger">Return to User List</a></div>
 </main>
 
 <?php

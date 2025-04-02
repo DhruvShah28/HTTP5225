@@ -47,38 +47,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Attraction</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-info-subtle bg-body-tertiary mb-4 p-4">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand fs-1 text-dark" href="dashboard.php">Website Admin</a>
+        <a class="navbar-brand" href="dashboard.php">Dashboard</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link fs-3 text-dark mx-3" href="logout.php">Logout</a>
+            <a class="nav-link" href="logout.php">Logout</a>
           </div>
         </div>
     </div>
   </nav>
  
-<div className="container d-flex justify-content-center align-items-center my-5">
-    <div className="card p-4 shadow-lg border-0 rounded-3">
-    <?php if (isset($_GET['error'])): ?>
+<div class="container d-flex justify-content-center align-items-center my-5">
+<div class="card addform">    
+<?php if (isset($_GET['error'])): ?>
         <div class="alert alert-danger text-center">
             <?= htmlspecialchars($_GET['error']) ?>
         </div>
     <?php endif; ?>
-    <h2 className="text-center mb-4">Add Attraction</h2>
+    <h1 class="text-center mb-4">Add Attraction</h1>
     <form action="addattraction.php" method="POST">
-        <fieldset className="border p-3 mb-3">
-        <legend className="fw-bold">Description Details</legend>
-        <div className="mb-3">
-            <label className="form-label">Category</label>
-            <select name="category" id="category">
+        <fieldset >
+        <legend >Description Details</legend>
+        <div >
+            <label class="form-label">Category</label>
+            <select name="category" id="category" class="form-control" >
                 <option value="XX" disabled selected>Select an Option</option>
                 <option value="Landmark">Landmark</option>
                 <option value="Museum">Museum</option>
@@ -87,51 +87,51 @@
                 <option value="GC">Garden / Conservatory</option>
             </select>
         </div>
-        <div className="mb-3">
-            <label className="form-label">Name</label>
-            <input type="text" name="name" className="form-control" />
+        <div >
+            <label class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" />
         </div>
-        <div className="mb-3">
-            <label className="form-label">Description</label>
-            <textarea name="description"  className="form-control"></textarea>
-        </div>
-        </fieldset>
-        
-        <fieldset className="border p-3 mb-3">
-        <legend className="fw-bold">Contact Details</legend>
-        <div className="mb-3">
-            <label className="form-label">Website</label>
-            <input type="url" name="website"  className="form-control" />
-        </div>
-        <div className="mb-3">
-            <label className="form-label">Address</label>
-            <input type="text" name="address" className="form-control" />
-        </div>
-        <div className="mb-3">
-            <label className="form-label">Phone</label>
-            <input type="tel" name="phone" className="form-control" />
-        </div>
-        <div className="mb-3">
-            <label className="form-label">Postal Code</label>
-            <input type="text" name="postalCode" className="form-control" />
-        </div>
-        <div className="mb-3">
-            <label className="form-label">City</label>
-            <input type="text" name="city" className="form-control" />
-        </div>
-        <div className="mb-3">
-            <label className="form-label">Longitude</label>
-            <input type="text" name="longitude" className="form-control" />
-        </div>
-        <div className="mb-3">
-            <label className="form-label">Latitude</label>
-            <input type="text" name="latitude" className="form-control" />
+        <div >
+            <label class="form-label">Description</label>
+            <textarea name="description"  class="form-control"></textarea>
         </div>
         </fieldset>
         
-        <div className="d-flex justify-content-between">
-        <button type="submit" className="btn btn-primary w-50">Add</button>
-        <button type="button" className="btn btn-secondary w-45">Cancel</button>
+        <fieldset>
+        <legend >Contact Details</legend>
+        <div >
+            <label class="form-label">Website</label>
+            <input type="url" name="website"  class="form-control" />
+        </div>
+        <div >
+            <label>Address</label>
+            <input type="text" name="address" class="form-control" />
+        </div>
+        <div >
+            <label class="form-label">Phone</label>
+            <input type="tel" name="phone" class="form-control" />
+        </div>
+        <div >
+            <label class="form-label">Postal Code</label>
+            <input type="text" name="postalCode" class="form-control" />
+        </div>
+        <div >
+            <label class="form-label">City</label>
+            <input type="text" name="city" class="form-control" />
+        </div>
+        <div >
+            <label class="form-label">Longitude</label>
+            <input type="text" name="longitude" class="form-control" />
+        </div>
+        <div >
+            <label class="form-label">Latitude</label>
+            <input type="text" name="latitude" class="form-control" />
+        </div>
+        </fieldset>
+        
+        <div class="d-flexd-flex btns gap-2">
+        <button type="submit" class="btn add-btn">Add</button>
+        <button type="button" class="btn cancel-btn" onclick="window.location.href='index.php';">Cancel</button>
         </div>
     </form>
 <!-- Bootstrap CDN JS -->
